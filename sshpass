@@ -1,0 +1,4 @@
+#!/bin/bash
+ssh-keygen -t rsa -N "" -f /root/.ssh/id_rsa
+touch /root/.ssh/authorized_keys
+sudo sshpass -p 'password' ssh-copy-id -o StrictHostKeyChecking=no root@compute
